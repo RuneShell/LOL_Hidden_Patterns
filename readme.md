@@ -48,7 +48,7 @@ I crawled 8,921 profiles from [OP.GG](https://op.gg/) using python `selenium`. <
 
 #### 01. Relationship Heatmap between numerical columns
 
-![img](https://github.com/RuneShell/LOL_Hidden_Patterns/tree/main/analysis/01._relationship_heapmap.png)
+![img](https://github.com/RuneShell/LOL_Hidden_Patterns/blob/main/analysis/01._relationship_heapmap.png?raw=true)
 
 > 0 : no clear relationship </br>
 > 1 : clear relationship
@@ -58,13 +58,13 @@ I found no clear hidden relationships here..
 
 #### 02. Relationships between `[tier, level, total_games, win_rate]`
 
-![img](https://github.com/RuneShell/LOL_Hidden_Patterns/tree/main/analysis/02._relationships_without_name.jpg)
+![img](https://github.com/RuneShell/LOL_Hidden_Patterns/blob/main/analysis/02._relationships_without_name.jpg?raw=true)
 </br></br>
 
 #### 03. `name` Morphological Analysis
 using `fastText`
 
-[**Nickname Embedding Cluster by game Tier**](https://htmlpreview.github.io/?https://github.com/RuneShell/LOL_Hidden_Patterns/tree/main/analysis/03._name_morphological_analysis)
+[**Nickname Embedding Cluster by game Tier**](https://htmlpreview.github.io/?https://github.com/RuneShell/LOL_Hidden_Patterns/blob/main/analysis/03._name_morphological_analysis.html)
 </br>
 I found no clear relationship between `tier` ↔ `name (morphological)`. <br>
 So we decided to analize relationship `tier` ↔ `name (semantic)`. 
@@ -98,13 +98,13 @@ Our team classified the names into 9 semantic classes using [Genspark AI](https:
 </br>
 
 #### 05. Analysis between `name type`, `role`
-![img](https://github.com/RuneShell/LOL_Hidden_Patterns/tree/main/analysis/05-1._distribution_of_name_type_by_role.png)
+![img](https://github.com/RuneShell/LOL_Hidden_Patterns/blob/main/analysis/05-1._distribution_of_name_type_by_role.png?raw=true)
 
 - `Neutral(중립적)` nicknames, such as simple nouns, were the most common.
 
 ↓ (without `Neutral`)
 
-![img](https://github.com/RuneShell/LOL_Hidden_Patterns/tree/main/analysis/05-2._distribution_of_name_type_by_role_(without_neutral).png)
+![img](https://github.com/RuneShell/LOL_Hidden_Patterns/blob/main/analysis/05-2._distribution_of_name_type_by_role_(without_neutral).png?raw=true)
 
  - `Cute(귀여운)` nickname rate for `Support(서포터)` is **1.79x higher** than the average of all other roles.
 
@@ -115,13 +115,13 @@ Our team classified the names into 9 semantic classes using [Genspark AI](https:
 </br>
 
 #### 06. Analysis between `name type`, `tier`
-![img](https://github.com/RuneShell/LOL_Hidden_Patterns/tree/main/analysis/06-1._distribution_of_name_type_by_tier.png)
+![img](https://github.com/RuneShell/LOL_Hidden_Patterns/blob/main/analysis/06-1._distribution_of_name_type_by_tier.png?raw=true)
 
 - The higher the `Tier`, the higher the proportion of `Neutral(중립적)` nicknames. `Challenger` tier for `Neutral` nicknames is **1.64x higher** than `Iron` tier.
 
 ↓ (without `Neutral`)
 
-![img](https://github.com/RuneShell/LOL_Hidden_Patterns/tree/main/analysis/06-2._distribution_of_name_type_by_tier_(without_neutral).png)
+![img](https://github.com/RuneShell/LOL_Hidden_Patterns/blob/main/analysis/06-2._distribution_of_name_type_by_tier_(without_neutral).png?raw=true)
 
 - The higher the `Tier`, the higher the proportion of `Professional(프로팀)` nicknames.
     - In `Challenger`, there are real progamers belong to professional teams.
