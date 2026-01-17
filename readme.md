@@ -1,5 +1,13 @@
+---
+constda
+- ["d", "asd"]
+
+---
+
 # `League of Legends` hidden patterns
 A project to **identify undiscovered patterns** in the world, for `Hidden Pattern(숨겨진 패턴)` course in Kyung Hee University.
+
+
 
 <br/>
 
@@ -8,9 +16,12 @@ A project to **identify undiscovered patterns** in the world, for `Hidden Patter
 ## Brief
 
 ### Data
-I crawled 8,921 profiles from [OP.GG](https://op.gg/) using python `selenium`. <small><small>(2026-01-04, Korean server)
+I crawled 8,921 profiles from [OP.GG](https://op.gg/) using python `selenium`. <sub>(2026-01-04, Korean server)</sub>
 
-### Distribution
+#### Distribution
+
+
+
 | Tier          | Data Count |
 | ----          | ----  |
 | Challenger    | 295[^1]   |
@@ -23,11 +34,15 @@ I crawled 8,921 profiles from [OP.GG](https://op.gg/) using python `selenium`. <
 | Silver        | 985       |
 | Bronze        | 997       |
 | Iron          | 984       |
-| **Total**     | **8921**  | 
+| **Total**     | **8921**  |
 
-[^1]: Maximim *summoner* count is limited.
 
-### data head
+[^1]: Maximim *summoner* count is limited. 
+
+#### data head
+
+<sub>
+
 | ranking | name       | tag   | tier       | LP   | most1 | most2 | most3 | level | win | lose | games | win_rate |
 | ------- | ---------- | ------ | ---------- | ---- | ---: | ---: | ---: | ----: | --: | ---: | ----: | -------- |
 | 1       | moment     |  #0619| Challenger | 2041 | 비에고   | 암베사   | 제이스   | 90    | 405 | 252  | 657   | 62%       |
@@ -35,13 +50,12 @@ I crawled 8,921 profiles from [OP.GG](https://op.gg/) using python `selenium`. <
 | 3       | T1 Guardian| #KR3  | Challenger | 1967 | 암베사   | 크산테   | 럼블    | 496   | 898 | 763  | 1661  | 54%      |
 | 4       | Phantasm   | #RANK1| Challenger | 1950 | 아크샨   | 퀸     | 흐웨이   | 74    | 304 | 170  | 474   | 64%      |
 
-</small></small>
+</sub>
 
+### Limitations
+- **Time Constraints**: As this was a one-week project, the nickname classification model may be somewhat unrefined.
 
-
-## Limitations
-- 1 week long project
-
+ - **Geographic Scope**: The dataset is limited to players on the Korean (KR) server only.
 
 ## Charts
 
@@ -50,7 +64,7 @@ I crawled 8,921 profiles from [OP.GG](https://op.gg/) using python `selenium`. <
 
 ![img](https://github.com/RuneShell/LOL_Hidden_Patterns/blob/main/analysis/01._relationship_heapmap.png?raw=true)
 
-> 0 : no clear relationship </br>
+> 0 : no clear relationship\
 > 1 : clear relationship
 
 I found no clear hidden relationships here..
@@ -83,9 +97,8 @@ Our team classified the names into 9 semantic classes using [Genspark AI](https:
 * `Character (캐릭터)`: Types that directly adopt the names of in-game champions or animation characters.
 * `Professional (프로팀)`: Types that express a sense of belonging by mimicking the nicknames or formats of famous pro gamers or teams (e.g., T1, GEN).
 
-> *I know this classifacation is somewhat crude, but we had only 2 days limit for data analysis. I wished to classifty names into 32 classes with continuous score, not a discrete classes for machine learning.*
+> *I know this classifacation is somewhat crude, but we had only 2 days limit for data analysis. I intended to classifty names into 32 categories using continuous scores rather than discrete classes for machine learning.*
 
-<small><small>
 
 | ranking | name        | tag    | tier       | LP   | most1 | most2 | most3 | level | win | lose | win_rate | role   | type |
 |---------|-------------|--------|------------|------|-------|-------|-------|-------|-----|------|----------|--------|------|
@@ -94,10 +107,9 @@ Our team classified the names into 9 semantic classes using [Genspark AI](https:
 | 5       | Effort      | #4444  | Challenger | 1936 | 노틸러스  | 브라움   | 알리스타  | 683   | 412 | 318  | 56%      | 탱커     | 중립적  |
 | 6       | LNG BuLLDoG | #KR2   | Challenger | 1879 | 아지르   | 갈리오   | 유나라   | 765   | 703 | 559  | 56%      | 마법사    | 프로팀  |
 
-</small></small>
 </br>
 
-#### 05. Analysis between `name type`, `role`
+#### 05. Analysis between `role`, `name type`
 ![img](https://github.com/RuneShell/LOL_Hidden_Patterns/blob/main/analysis/05-1._distribution_of_name_type_by_role.png?raw=true)
 
 - `Neutral(중립적)` nicknames, such as simple nouns, were the most common.
@@ -114,7 +126,7 @@ Our team classified the names into 9 semantic classes using [Genspark AI](https:
 
 </br>
 
-#### 06. Analysis between `name type`, `tier`
+#### 06. Analysis between `tier`, `name type`
 ![img](https://github.com/RuneShell/LOL_Hidden_Patterns/blob/main/analysis/06-1._distribution_of_name_type_by_tier.png?raw=true)
 
 - The higher the `Tier`, the higher the proportion of `Neutral(중립적)` nicknames. `Challenger` tier for `Neutral` nicknames is **1.64x higher** than `Iron` tier.
@@ -124,10 +136,31 @@ Our team classified the names into 9 semantic classes using [Genspark AI](https:
 ![img](https://github.com/RuneShell/LOL_Hidden_Patterns/blob/main/analysis/06-2._distribution_of_name_type_by_tier_(without_neutral).png?raw=true)
 
 - The higher the `Tier`, the higher the proportion of `Professional(프로팀)` nicknames.
-    - In `Challenger`, there are real progamers belong to professional teams.
-    - But 
+    - In `Challenger`, there are real pro-gamers belonging to professional teams.
+    - Even excluding them, higher-tier players show a stronger tendency to mimic pro-player naming conventions.
 
+- The higher the `Tier`, the lower the proportion of `Sexual(선정적)` and `Humorous(유머러스)` nicknames.
+    - Notably, `Sexual` nicknames are **0%** in `Challenger`.
+    - Conversely, lower tiers like `Iron`(17.78%) and `Bronze`(17.35%) exhibit significantly higher rates of `Humorous` nicknames.
+
+- The rate of `Insincere(성의없는)` nicknames is highest in `Iron` and peaks between the range of `Silver` and `Platinum`.
+    - The high rate in `Iron` reflects low engagement for the game.
+    - Excluding `Iron`, the higher rates in low-`tier` segments suggest a strong desire for self-expression.
+
+- Emotional nickname types are prominent in the mid-to-high `Tier` range from `Platinum` to `Diamond`.
+    - `Aggressive(공격적)` nicknames are most notable in `Emerald`(7.14%) and `Platinum`(6.19%).
+    - `Pessimistic(암울한)` nicknames peak in `Platinum`(6.40%) and `Emerald`(5.73%).
+    - Interestingly, `Cute(귀여운)` nicknames also reach their highest points in `Diamond`(9.11%) and `Platinum`(9.44%).
 
 </br>
 
-#### 07. Analysis between 
+#### 07. Analysis with `name`
+![img](https://github.com/RuneShell/LOL_Hidden_Patterns/blob/main/analysis/07._relationships_with_name.jpg?raw=true)
+
+- The bottom two charts indicate that players with shorter nicknames tend to have a higher average number of games played.
+    - This suggests a correlation between passion for the game and the ownership of "Rare Nicknames" (S-tier names).
+
+
+</br></br>
+
+In conclusion, high-engagement players tend to prefer concise and prestigious naming conventions.
