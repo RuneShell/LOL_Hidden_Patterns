@@ -1,13 +1,5 @@
----
-constda
-- ["d", "asd"]
-
----
-
 # `League of Legends` hidden patterns
 A project to **identify undiscovered patterns** in the world, for `Hidden Pattern(숨겨진 패턴)` course in Kyung Hee University.
-
-
 
 <br/>
 
@@ -19,8 +11,6 @@ A project to **identify undiscovered patterns** in the world, for `Hidden Patter
 I crawled 8,921 profiles from [OP.GG](https://op.gg/) using python `selenium`. <sub>(2026-01-04, Korean server)</sub>
 
 #### Distribution
-
-
 
 | Tier          | Data Count |
 | ----          | ----  |
@@ -99,14 +89,16 @@ Our team classified the names into 9 semantic classes using [Genspark AI](https:
 
 > *I know this classifacation is somewhat crude, but we had only 2 days limit for data analysis. I intended to classifty names into 32 categories using continuous scores rather than discrete classes for machine learning.*
 
+<sub>
 
 | ranking | name        | tag    | tier       | LP   | most1 | most2 | most3 | level | win | lose | win_rate | role   | type |
 |---------|-------------|--------|------------|------|-------|-------|-------|-------|-----|------|----------|--------|------|
 | 1       | moment      | #0619  | Challenger | 2041 | 비에고   | 암베사   | 제이스   | 90    | 405 | 252  | 62%      | 전사     | 중립적  |
-| 2       | DK Sharvel  | #KR1   | Challenger | 2040 | 바이    | 키아나   | 판테온   | 965   | 729 | 584  | 5<<6%      | 전사     | 프로팀  |
+| 2       | DK&nbsp;Sharvel  | #KR1   | Challenger | 2040 | 바이    | 키아나   | 판테온   | 965   | 729 | 584  | 56%      | 전사     | 프로팀  |
 | 5       | Effort      | #4444  | Challenger | 1936 | 노틸러스  | 브라움   | 알리스타  | 683   | 412 | 318  | 56%      | 탱커     | 중립적  |
 | 6       | LNG BuLLDoG | #KR2   | Challenger | 1879 | 아지르   | 갈리오   | 유나라   | 765   | 703 | 559  | 56%      | 마법사    | 프로팀  |
 
+</sub>
 </br>
 
 #### 05. Analysis between `role`, `name type`
